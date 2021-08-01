@@ -1,0 +1,17 @@
+{
+  "name": "reviews-courses-api",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "author": "theandersonn <theandersonn@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
