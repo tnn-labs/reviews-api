@@ -18,8 +18,15 @@ yarn add cors
 
 ## Mongo
 ```bash
-# levantar o banco localmente
-mongod --dbpath ./reviews-api/data --fork --logpath ./mongo.log
+# Crie a pasta `mongoData` na raiz
+mkdir mongoData 
+
+# levantar o banco localmente (opcao 1)
+mongod --dbpath ./mongoData --fork --logpath ./mongo.log
+
+# levantar o banco localmente (opcao 2 - mac)
+brew services start mongodb-community
+brew services stop mongodb-community
 
 # utilizar terminal para acessar o mondo
 mongo

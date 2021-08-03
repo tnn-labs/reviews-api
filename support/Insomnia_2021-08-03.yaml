@@ -1,0 +1,181 @@
+_type: export
+__export_format: 4
+__export_date: 2021-08-03T16:58:13.603Z
+__export_source: insomnia.desktop.app:v2021.4.1
+resources:
+  - _id: req_3bc477c231aa4eaca94b63c5b6a90158
+    parentId: fld_32441702e1ca40ae977c61211d57a3c8
+    modified: 1627848080023
+    created: 1627845858663
+    url: "{{ _.baseURL }}/courses/6106fc872f9d81206d0e728f"
+    name: Deletar avaliação
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627843801577
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_32441702e1ca40ae977c61211d57a3c8
+    parentId: wrk_84803c11221a4e23a424cad830c0c221
+    modified: 1627845395787
+    created: 1627845395787
+    name: Cursos
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1627845395787
+    _type: request_group
+  - _id: wrk_84803c11221a4e23a424cad830c0c221
+    parentId: null
+    modified: 1627850971123
+    created: 1627843723115
+    name: reviews
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_e23627dd6a83424cbb4282ae2ec9505b
+    parentId: fld_32441702e1ca40ae977c61211d57a3c8
+    modified: 1627845694941
+    created: 1627845638389
+    url: "{{ _.baseURL }}/courses/6106f3781e6c4f155d7e6f37"
+    name: Atualizar avalicao
+    description: ""
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"title": "teste - update",
+        	"description": "descricao..."
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_38ba547cfb864f17b0175c3f0938b461
+    authentication: {}
+    metaSortKey: -1627843801527
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_26e7b8924728424abbaca57b1ad2fe33
+    parentId: fld_32441702e1ca40ae977c61211d57a3c8
+    modified: 1627845735222
+    created: 1627845517663
+    url: "{{ _.baseURL }}/courses"
+    name: Listar todas as avaliacoes
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627843801477
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7cb2c7a24a644b618bf55666c0a3e37a
+    parentId: fld_32441702e1ca40ae977c61211d57a3c8
+    modified: 1627847459360
+    created: 1627845569262
+    url: "{{ _.baseURL }}/courses/6106faa998fe881e18bc78ff"
+    name: Listar avaliacao por id
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1627843801452
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_dc1a867e8cf944bc9da02ee6b3b8f951
+    parentId: fld_32441702e1ca40ae977c61211d57a3c8
+    modified: 1627847974469
+    created: 1627843801427
+    url: "{{ _.baseURL }}/courses"
+    name: Criar avaliação
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        	{
+        		"title": "React Avançado 3",
+        		"thumb": "https://img-c.udemycdn.com/course/240x135/3210857_1c0e.jpg",
+        		"school": "Udemy - Willian Justen",
+        		"description": "Criar ecommerce de games",
+        		"year": "2021",
+        		"testimonial": "O curso apresentou-me novas ferramentas, me ajudou a estruturar o Front-End e aplicar testes",
+        		"url": "https://reactavancado.com.br/",
+        		"technologies": ["NextJS", "TypeScript", "Jest", "Testing Library", "Storybook", "Cypress", "Strapi", "Apollo", "GraphQL"]
+        	}
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_f2a8cba9d57748768d9b750ec68cd754
+    authentication: {}
+    metaSortKey: -1627843801427
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_90f2744131643b011d91fd624b58175d93cf1c27
+    parentId: wrk_84803c11221a4e23a424cad830c0c221
+    modified: 1627843754361
+    created: 1627843723332
+    name: Base Environment
+    data:
+      baseURL: http://localhost:3333
+    dataPropertyOrder:
+      "&":
+        - baseURL
+    color: null
+    isPrivate: false
+    metaSortKey: 1627843723332
+    _type: environment
+  - _id: jar_90f2744131643b011d91fd624b58175d93cf1c27
+    parentId: wrk_84803c11221a4e23a424cad830c0c221
+    modified: 1627843723335
+    created: 1627843723335
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_7bc2f5457b2a44699e990ffdfab67af6
+    parentId: wrk_84803c11221a4e23a424cad830c0c221
+    modified: 1627843723120
+    created: 1627843723120
+    fileName: reviews courses
+    contents: ""
+    contentType: yaml
+    _type: api_spec
