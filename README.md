@@ -1,3 +1,9 @@
+## Para rodar a API
+```bash
+# iniciar o servidor
+yarn dev
+```
+
 ## Passos feitos na criacao do projeto
 ```bash
 # inicializar package
@@ -16,22 +22,35 @@ yarn add nodemon -D
 yarn add cors
 ```
 
-## Mongo
+## Mongo localmente (opcao 1) 
 ```bash
-# Crie a pasta `mongoData` na raiz
+# Esse passo funciona no linux e mac
+# -------------------------------------
+
+# Crie a pasta `mongoData` na raiz da sua maquina
 mkdir mongoData 
 
-# levantar o banco localmente (opcao 1)
+# rode esse comando para levantar o banco e liberar o terminal
 mongod --dbpath ./mongoData --fork --logpath ./mongo.log
 
-# levantar o banco localmente (opcao 2 - mac)
+# utilizar terminal para acessar o client mongo
+mongo
+
+# criar/selecionar o banco de reviews
+use reviews
+```
+
+## Mongo localmente (opcao 2)
+```bash
+# esse passo é somente para mac
+# -------------------------------------
 brew services start mongodb-community
 brew services stop mongodb-community
 
-# utilizar terminal para acessar o mondo
+# utilizar terminal para acessar o client mongo
 mongo
 
-# selecionar o banco de reviews
+# criar/selecionar o banco de reviews
 use reviews
 ```
 
