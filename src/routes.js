@@ -33,6 +33,7 @@ router.post('/courses', async (request, response) => {
     url,
     technologies,
   })
+
   await course.save()
   response.send(course)
 })
@@ -49,17 +50,31 @@ router.get('/courses/:id', async (request, response) => {
 })
 
 // Update course
-router.patch('/courses/:id', async (request, response) => {
+router.put('/courses/:id', async (request, response) => {
+  const {
+    title,
+    thumb,
+    school,
+    description,
+    year,
+    testimonial,
+    url,
+    technologies,
+  } = request.body
+
   try {
     const course = await Course.findOne({ _id: request.params.id })
 
-    if (request.body.title) {
-      course.title = request.body.title
-    }
-
-    if (request.body.content) {
-      course.description = request.body.description
-    }
+    Object.assign(course, {
+      title,
+      thumb,
+      school,
+      description,
+      year,
+      testimonial,
+      url,
+      technologies,
+    })
 
     await course.save()
     response.send(course)
