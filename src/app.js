@@ -4,12 +4,12 @@ const cors = require('cors')
 const express = require('express')
 
 const connectDB = require('./db/connect')
-const routes = require('./routes')
+const coursesRouter = require('./routes/courses')
 
 const app = express()
 app.use(cors())
 app.use(express.json())
-app.use('/api/v1/', routes)
+app.use('/api/v1/courses', coursesRouter)
 
 const startServer = async () => {
   try {
