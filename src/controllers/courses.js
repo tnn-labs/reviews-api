@@ -47,10 +47,9 @@ const updateCourse = async (req, res) => {
     })
 
     await course.save()
-    req.json({ course })
+    res.status(200).json({ course })
   } catch {
-    res.status(404)
-    res.json({ error: "Course doesn't exist!" })
+    res.status(404).json({ error: "Course doesn't exist!" })
   }
 }
 
